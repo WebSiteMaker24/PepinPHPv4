@@ -33,25 +33,81 @@ Fonctionnalités principales :
 
 ## Structure du projet
 ```
-PepinPHP
-├─ core
-│ ├─ constantes.php # Constantes du projet (routes, infos entreprise...)
-├─ public_html
-│ ├─ .htaccess # Règles de réécriture pour la production
-│ ├─ index.php # Point d'entrée, gestion du routage
-│ └─ public
-│ ├─ css
-│ ├─ img
-│ └─ js
-├─ src
-│ ├─ control
-│ ├─ model
-│ ├─ view
-│ └─ middleware
-├─ sendmail.php # Script d’envoi d’emails (PHPMailer)
-├─ README.md
-├─ LICENSE
-└─ .env # Configuration environnementale (non versionnée)
+PepinPHP/
+├── core/                       # Noyau du projet, fichiers principaux
+│   ├── Autoload.php            # Autoloader des classes
+│   ├── Bootstrap.php           # Initialisation du framework
+│   ├── constantes.php          # Constantes globales (routes, infos, etc.)
+│   ├── env.txt                 # Exemple fichier de config environnementale
+│   ├── sendmail.php            # Envoi d’e-mails (PHPMailer)
+│   ├── phpmailer/              # Librairie PHPMailer
+│   │   ├── Exception.php
+│   │   ├── PHPMailer.php
+│   │   └── SMTP.php
+│   └── src/                    # Code source (MVC, middleware, modules)
+│       ├── control/            # Contrôleurs
+│       │   ├── ControlForm.php
+│       │   ├── ControlMain.php
+│       │   └── ControlRoute.php
+│       ├── csrf/               # Protection CSRF
+│       │   └── CSRFProtection.php
+│       ├── envloader/          # Gestion variables environnementales
+│       │   └── EnvLoader.php
+│       ├── log/                # Logs
+│       │   └── form-errors.log
+│       ├── middleware/         # Middleware génériques
+│       │   └── Middleware.php
+│       ├── model/              # Modèles / accès base de données
+│       │   └── Database.php
+│       ├── module/             # Modules fonctionnels
+│       │   ├── comptevisit/
+│       │   │   ├── ControlVisit.php
+│       │   │   └── ModelVisit.php
+│       │   ├── newsletter/
+│       │   │   ├── ControlNewsletter.php
+│       │   │   └── ModelNewsletter.php
+│       │   └── users/
+│       │       ├── ControlUser.php
+│       │       └── ModelUser.php
+│       └── view/               # Vues & templates
+│           ├── include/
+│           │   └── hero.php
+│           ├── navigation/
+│           │   ├── 404.php
+│           │   ├── accueil.php
+│           │   └── contact.php
+│           └── template/
+│               ├── footer.php
+│               ├── header.php
+│               └── navbar.php
+├── template_mail/              # Templates emails
+│   ├── contact_form.php
+│   └── newsletter_confirm.php
+├── public_html/                # Web root (dossier public)
+│   ├── .htaccess               # Règles de réécriture
+│   ├── favicon.ico
+│   ├── favicon.png
+│   ├── htaccess.txt            # Exemple de configuration
+│   ├── index.php               # Point d’entrée principal
+│   ├── licence.txt
+│   ├── readme.md
+│   └── public/                 # Ressources publiques
+│       ├── css/
+│       │   └── style.css
+│       ├── font/
+│       │   ├── Poppins-BlackItalic.ttf
+│       │   ├── Poppins-Italic.ttf
+│       │   ├── Poppins-Light.ttf
+│       │   └── Poppins-Regular.ttf
+│       ├── img/
+│       │   ├── banner.avif
+│       │   └── logo.png
+│       └── js/
+├── installDatabase.php         # Script d’installation base de données
+├── .env                       # Configuration environnementale (non versionnée)
+├── README.md                   # Documentation principale
+└── LICENSE                    # Licence du projet
+
 ```
 ---
 
