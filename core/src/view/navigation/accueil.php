@@ -188,13 +188,13 @@ DB_PASSWORD=root</code></pre>
         <br>
         🔗 <a href="https://github.com/WebSiteMaker24" target="_blank">github.com/WebSiteMaker24</a> </br>
         🐙 <span onclick="copyCloneCommand()" style="cursor: pointer; color: #0366d6; text-decoration: underline;">
-            git clone https://github.com/WebSiteMaker24/PepinPHP.git
+            git clone https://github.com/WebSiteMaker24/PepinPHPv4.git
         </span>
     </p>
 
     <script>
         function copyCloneCommand() {
-            const text = 'git clone https://github.com/WebSiteMaker24/PepinPHP.git';
+            const text = 'git clone https://github.com/WebSiteMaker24/PepinPHPv4.git';
             navigator.clipboard.writeText(text)
                 .then(() => alert('✅ Commande copiée dans le presse-papiers'))
                 .catch(() => alert('❌ Erreur lors de la copie'));
