@@ -32,7 +32,7 @@ Fonctionnalités principales :
 ---
 
 ## Structure du projet
-
+```
 PepinPHP
 ├─ core
 │ ├─ constantes.php # Constantes du projet (routes, infos entreprise...)
@@ -52,11 +52,7 @@ PepinPHP
 ├─ README.md
 ├─ LICENSE
 └─ .env # Configuration environnementale (non versionnée)
-
-yaml
-Copier
-Modifier
-
+```
 ---
 
 ## Installation
@@ -69,9 +65,6 @@ Configurer votre serveur web pour que la racine pointe sur public_html/public/.
 
 Copier env.txt en .env et configurer vos variables (obligatoire) :
 
-env
-Copier
-Modifier
 # Base de données
 DB_HOST=localhost
 DB_NAME=nom_de_votre_base
@@ -82,9 +75,6 @@ DB_PASS=votre_mot_de_passe
 Configuration
 Dans core/constantes.php, définissez le préfixe URL selon votre environnement :
 
-php
-Copier
-Modifier
 // En local avec MAMP ou autre, si le .htaccess ne fonctionne pas
 define('URL_PREFIX', '?url=');
 
@@ -92,16 +82,10 @@ define('URL_PREFIX', '?url=');
 define('URL_PREFIX', '/');
 Les constantes de routes sont automatiquement générées avec ce préfixe, par exemple :
 
-php
-Copier
-Modifier
 define('URL_ACCUEIL', URL_PREFIX . 'accueil');
 define('URL_CONTACT', URL_PREFIX . 'contact');
 Configurer SMTP dans sendmail.php avec vos identifiants :
 
-php
-Copier
-Modifier
 define('COMPANY_EMAIL', 'votre.email@exemple.com');
 define('SMTP_PASSWORD', 'votre_mdp_application_smtp');
 // Complétez avec les autres constantes nécessaires
@@ -114,9 +98,6 @@ En prod : https://votredomaine.fr/accueil
 
 Utiliser les constantes URL dans vos vues pour éviter les erreurs et faciliter la maintenance :
 
-php
-Copier
-Modifier
 <a href="<?php echo URL_CONTACT; ?>">Contact</a>
 Le routeur dans public_html/index.php charge la vue correspondante.
 
@@ -125,10 +106,7 @@ Les templates (header.php, navbar.php, footer.php) sont inclus automatiquement.
 Routage
 Exemple simplifié de la gestion des routes dans le contrôleur principal (ControlRoute.php) :
 
-php
-Copier
-Modifier
-switch ($page) {
+switch ($url) {
     case '':
     case 'accueil':
         $title = "Accueil - PepinPHP";
