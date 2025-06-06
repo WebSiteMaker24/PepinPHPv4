@@ -192,7 +192,7 @@ Email : contact@websitemaker.fr
 
 GitHub : github.com/WebSiteMaker24
 
-Clone : git clone https://github.com/WebSiteMaker24/PepinPHP.git
+Clone : git clone https://github.com/WebSiteMaker24/PepinPHPv4.git
 
 Licence : Ce projet est sous licence MIT. Voir le fichier LICENSE.
 
