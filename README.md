@@ -113,7 +113,7 @@ PepinPHP/
 
 1. Cloner le dépôt :  
 
-git clone https://github.com/WebSiteMaker24/PepinPHP.git
+git clone https://github.com/WebSiteMaker24/PepinPHPv4.git
 Configurer votre serveur web pour que la racine pointe sur public_html/public/.
 
 Copier env.txt en .env et configurer vos variables (obligatoire) :
