@@ -88,7 +88,7 @@
 
     <h2>Navigation et URL</h2>
     <p>
-        Les constantes de navigation sont définies dans <code>url.php</code> :
+        Les constantes de navigation sont définies dans <code>constantes.php</code> :
     </p>
     <pre><code>// url.php
 define('URL_ACCUEIL', '?url=accueil');
