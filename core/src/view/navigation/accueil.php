@@ -90,7 +90,7 @@
     <p>
         Les constantes de navigation sont définies dans <code>constantes.php</code> :
     </p>
-    <pre><code>// url.php
+    <pre><code>// constantes.php
 define('URL_ACCUEIL', '?url=accueil');
 define('URL_CONTACT', '?url=contact');</code></pre>
     <p>
